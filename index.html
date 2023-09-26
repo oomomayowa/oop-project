@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oop-project</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      async
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"
+    ></script>
+
+    <style>
+      body {
+        background-image: url(./src/pexels-mikhail-nilov-8542542.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid border">
+      <div class="row border border-primary">
+        <div
+          class="col-lg-6 col-md-6 col-12 p-2 border border-success border-2"
+        >
+          <h1
+            class="text-center m-5 text-decoration-underline text-dark fs-1 fw-bolder fst-italic"
+          >
+            COUNTRIES IN AFRICAN
+          </h1>
+        </div>
+        <div
+          class="col-lg-6 col-md-6 col-12 p-2 border border-success border-2"
+        >
+          <button class="btn btn-sm btn-primary m-2" onclick="shown1()">
+            Nigeria
+          </button>
+          <button class="btn btn-sm btn-dark m-3" onclick="shown2()">
+            South-Africa
+          </button>
+          <button
+            class="btn btn-sm btn-tertiary m-3 text-dark"
+            onclick="shown3()"
+          >
+            Angola
+          </button>
+          <button class="btn btn-sm btn-secondary m-3" onclick="shown4()">
+            Namibia
+          </button>
+          <button
+            class="btn btn-sm btn-primary-emphasis m-2"
+            onclick="shown5()"
+          >
+            Ethiopia
+          </button>
+          <button class="btn btn-sm btn-info m-3" onclick="shown6()">
+            Chad
+          </button>
+          <button class="btn btn-sm btn-warning m-3" onclick="shown7()">
+            Algeria
+          </button>
+          <button class="btn btn-sm btn-secondary m-3" onclick="shown8()">
+            Cameroon
+          </button>
+          <button class="btn btn-sm btn-danger m-3" onclick="shown9()">
+            Benin
+          </button>
+          <button class="btn btn-sm btn-primary m-3" onclick="shown10()">
+            Niger
+          </button>
+          <button class="btn btn-sm btn-warning m-3" onclick="shown11()">
+            kenya
+          </button>
+          <button class="btn btn-sm btn-info m-3" onclick="shown12()">
+            Uganda
+          </button>
+          <button
+            class="btn btn-sm btn-tertiary m-3 text-light"
+            onclick="shown13()"
+          >
+            Gabon
+          </button>
+          <button class="btn btn-sm btn-success m-3" onclick="shown14()">
+            Senegal
+          </button>
+          <button
+            class="btn btn-sm btn-secondary-emphasis m-3"
+            onclick="shown15()"
+          >
+            Ghana
+          </button>
+          <button
+            class="btn btn-sm btn-primary-emphasis m-3"
+            onclick="shown16()"
+          >
+            Botswana
+          </button>
+          <button class="btn btn-sm btn-info p-3" onclick="shown17()">
+            Burundi
+          </button>
+          <button
+            class="btn btn-sm btn-warning-emphasis m-3"
+            onclick="shown18()"
+          >
+            Rwanda
+          </button>
+          <button
+            class="btn btn-sm btn-danger-emphasis m-3"
+            onclick="shown19()"
+          >
+            Mali
+          </button>
+          <button class="btn btn-sm btn-success m-3" onclick="shown20()">
+            Egypt
+          </button>
+          <button class="btn btn-sm btn-light m-3" onclick="shown21()">
+            Morocco
+          </button>
+          <button class="btn btn-sm btn-dark m-3" onclick="shown22()">
+            TogO
+          </button>
+          <button class="btn btn-sm btn-secondary m-3" onclick="shown23()">
+            Khartoum
+          </button>
+          <button class="btn btn-sm btn-primary m-3" onclick="shown24()">
+            Malawi
+          </button>
+          <button class="btn btn-sm btn-danger m-3" onclick="shown25()">
+            Libya
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid mx-auto col-4">
+      <div class="col-" id="show"></div>
+    </div>
+
+    <script>
+      class Country {
+        constructor(city, named, cap, conti, popu, flag, fact) {
+          this.name = named;
+          this.capital = cap;
+          this.population = popu;
+          this.continent = conti;
+          this.flag = flag;
+          this.funFact = fact;
+          this.city = city;
+        }
+        details() {
+          show.innerHTML = `          
+      <div class="card class="row">
+          <div class="col">
+                     <div>${this.city}</div>
+                     <a href="#!">
+                       <div class="mask" style="background-color: rgba(251,251,251,0.15
+                     );"></div>
+                     </a>
+                   <div class="card-body">          
+                    <h1 class="card-title">${this.name}</h1>
+                    <h4 class="card-text">Capital city:${this.capital} </h4>
+                       <h5 class="card-text">Has ${this.continent} as continent</h5>
+                     <h5 class="card-text">With the population of ${this.population}</h5>
+                     <h5 class="card-text"> ${this.flag} </h5>
+                     <p class="card-description">${this.funFact}</p>
+                  </div>
+          </div>
+      </div>  `;
+        }
+      }
+
+      let CountryOne = new Country(
+        ` <img src="./src/nigeria2.jpeg" / width="100%">`,
+        "Nigeria",
+        "Abuja",
+        "Africa",
+        "213.4 million (2021)",
+        `<img src="./src/Nigeria.png" /width="30">`,
+        "Nigeria, an African country on the Gulf of Guinea, has many natural landmarks and wildlife reserves. Protected areas such as Cross River National Park and Yankari National Park have waterfalls, dense rainforest, savanna and rare primate habitats. One of the most recognizable sites is Zuma Rock, a 725m-tall monolith outside the capital of Abuja that’s pictured on the national currency."
+      );
+
+      let CountryTwo = new Country(
+        `<img src="./src/south-africa2.jpeg"/ width="100%">`,
+        "South-Africa",
+        " Cape Town, Pretoria, Bloemfontein",
+        "Africa",
+        "59.39 million (2021)",
+        `<img src="South-Africa.png" /width="30">`,
+        "South Africa is a country on the southernmost tip of the African continent, marked by several distinct ecosystems. Inland safari destination Kruger National Park is populated by big game. The Western Cape offers beaches, lush winelands around Stellenbosch and Paarl, craggy cliffs at the Cape of Good Hope, forest and lagoons along the Garden Route, and the city of Cape Town, beneath flat-topped Table Mountain."
+      );
+
+      let CountryThree = new Country(
+        `<img src="./src/angola2.jpeg" / width="100%">`,
+        "Angola",
+        " Luanda",
+        "Africa",
+        " 34.5 million (2021)",
+        `<img src="Angola.png" /width="30">`,
+        "Angola is a Southern African nation whose varied terrain encompasses tropical Atlantic beaches, a labyrinthine system of rivers and Sub-Saharan desert that extends across the border into Namibia. The country's colonial history is reflected in its Portuguese-influenced cuisine and its landmarks including Fortaleza de São Miguel, a fortress built by the Portuguese in 1576 to defend the capital, Luanda.."
+      );
+
+      let Country4 = new Country(
+        `<img src="./src/namibia2.jpeg"/ width="100%">`,
+        "Namibia",
+        "  Windhoek",
+        "Africa",
+        "2.53 million (2021)",
+        `<img src="Namibia.png" /width="30">`,
+        "Namibia, a country in southwest Africa, is distinguished by the Namib Desert along its Atlantic Ocean coast. The country is home to diverse wildlife, including a significant cheetah population. The capital, Windhoek, and coastal town Swakopmund contain German colonial-era buildings such as Windhoek's Christuskirche, built in 1907. In the north, Etosha National Park’s salt pan draws game including rhinos and giraffes."
+      );
+
+      let Country5 = new Country(
+        `<img src="./src/ethiopia2.jpeg" / width="100%">`,
+        "Ethiopia",
+        "Addis Ababa",
+        "Africa",
+        "Population: 120.3 million (2021)",
+        `<img src="Ethiopia.png" /width="30">`,
+        "Ethiopia, in the Horn of Africa, is a rugged, landlocked country split by the Great Rift Valley. With archaeological finds dating back more than 3 million years, it’s a place of ancient culture. Among its important sites are Lalibela with its rock-cut Christian churches from the 12th–13th centuries. Aksum is the ruins of an ancient city with obelisks, tombs, castles and Our Lady Mary of Zion church."
+      );
+
+      let Country6 = new Country(
+        `<img src="./src/chad2.jpeg" / width="100%">`,
+        "Chad",
+        " Capital: N'Djamena",
+        "Africa",
+        "17.18 million (2021) ",
+        `<img src="chad.png" /width="30">`,
+        "Chad, officially the Republic of Chad, is a landlocked country at the crossroads of North and Central Africa. It is bordered by Libya to the north, Sudan to the east, the Central African Republic to the south, Cameroon to the southwest, Nigeria to the southwest, and Niger to the west."
+      );
+
+      let Country7 = new Country(
+        `<img src="./src/Algeria2.jpeg"/ width="100%">`,
+        "Algeria",
+        "Algiers [El Djazaïr]",
+        "Africa",
+        " 44.18 million (2021)",
+        `<img src="Algeria.png"/width="100">`,
+        "Algeria is a North African country with a Mediterranean coastline and a Saharan desert interior. Many empires have left legacies here, such as the ancient Roman ruins in seaside Tipaza. In the capital, Algiers, Ottoman landmarks like circa-1612 Ketchaoua Mosque line the hillside Casbah quarter, with its narrow alleys and stairways. The city’s Neo-Byzantine basilica Notre Dame d’Afrique dates to French colonial rule."
+      );
+
+      let Country8 = new Country(
+        `<img src="./src/cameroon2.jpeg"/ width="100%">`,
+        "Cameroon",
+        " Yaoundé",
+        "Africa",
+        " 27.2 million (2021)",
+        `<img src="Cameroon.png"/width="30">`,
+        "Cameroon, on the Gulf of Guinea, is a Central African country of varied terrain and wildlife. Its inland capital, Yaoundé, and its biggest city, the seaport Douala, are transit points to ecotourism sites as well as beach resorts like Kribi – near the Chutes de la Lobé waterfalls, which plunge directly into the sea – and Limbe, where the Limbe Wildlife Centre houses rescued primates."
+      );
+
+      let Country9 = new Country(
+        `<img src="./src/benin2.jpeg"/ width="100%">`,
+        "Benin",
+        " Porto-Novo",
+        "Africa",
+        "13 million (2021) ",
+        `<img src="Benin.png"/width="30">`,
+        "Benin, a French-speaking West African nation, is a birthplace of the vodun (or “voodoo”) religion and home to the former Dahomey Kingdom from circa 1600–1900. In Abomey, Dahomey's former capital, the Historical Museum occupies two royal palaces with bas-reliefs recounting the kingdom’s past and a throne mounted on human skulls. To the north, Pendjari National Park offers safaris with elephants, hippos and lions"
+      );
+
+      let Country10 = new Country(
+        `<img src="./src/niger2.jpeg"/ width="100%">`,
+        "Niger",
+        " Capital: Niamey",
+        "Africa",
+        "Population: 25.25 million (2021)",
+        `<img src="Niger.png"/width="30">`,
+        "Niger or the Niger, officially the Republic of the Niger, is a landlocked country in West Africa. It is a unitary state bordered by Libya to the northeast, Chad to the east, Nigeria to the south, Benin and Burkina Faso to the southwest, Mali to the west, and Algeria to the northwest."
+      );
+
+      let Country11 = new Country(
+        `<img src="./src/kenya2.jpeg"/ width="100%">`,
+        "kenya",
+        "  Nairobi",
+        "Africa",
+        " 53.01 million (2021) ",
+        `<img src="kenya.png"/width="30">`,
+        "Kenya is a country in East Africa with coastline on the Indian Ocean. It encompasses savannah, lakelands, the dramatic Great Rift Valley and mountain highlands. It's also home to wildlife like lions, elephants and rhinos. From Nairobi, the capital, safaris visit the Maasai Mara Reserve, known for its annual wildebeest migrations, and Amboseli National Park, offering views of Tanzania's 5,895m Mt. Kilimanjaro."
+      );
+
+      let Country12 = new Country(
+        `<img src="./src/uganda2.jpeg"/ width="100%">`,
+        "Uganda",
+        " Kampala",
+        "Africa",
+        " 45.85 million (2021)",
+        `<img src="uganda.png"/width="30">`,
+        "Uganda is a landlocked country in East Africa whose diverse landscape encompasses the snow-capped Rwenzori Mountains and immense Lake Victoria. Its abundant wildlife includes chimpanzees as well as rare birds. Remote Bwindi Impenetrable National Park is a renowned mountain gorilla sanctuary. Murchison Falls National Park in the northwest is known for its 43m-tall waterfall and wildlife such as hippos"
+      );
+
+      let Country13 = new Country(
+        `<img src="./src/gabon2.jpeg"/ width="100%"">`,
+        "Gabon",
+        " Cape Town, Pretoria, Bloemfontein",
+        "Africa",
+        "59.39 million (2021)",
+        `<img src="gabon.png"/width="30">`,
+        "Gabon, a country along the Atlantic coast of Central Africa, has significant areas of protected parkland. The forested coastal terrain of its famed Loango National Park shelters a diversity of wildlife, from gorillas and hippos to whales. Lopé National Park consists of mostly rainforest. Akanda National Park is known for its mangroves and tidal beaches."
+      );
+
+      let Country14 = new Country(
+        `<img src="./src/senegal2.jpeg"/ width="100%">`,
+        "Senegal",
+        "  Libreville",
+        "Africa",
+        "2.341 million (2021)",
+        `<img src="Senegal.png"/width="30">`,
+        "South Africa is a country on the southernmost tip of the African continent, marked by several distinct ecosystems. Inland safari destination Kruger National Park is populated by big game. The Western Cape offers beaches, lush winelands around Stellenbosch and Paarl, craggy cliffs at the Cape of Good Hope, forest and lagoons along the Garden Route, and the city of Cape Town, beneath flat-topped Table Mountain."
+      );
+
+      let Country15 = new Country(
+        `<img src="./src/ghana2.jpeg"/ width="100%">`,
+        "Ghana",
+        "Accra",
+        "Africa",
+        "32.83 million (2021)",
+        `<img src="ghana.png"/width="30">`,
+        "Ghana, officially the Republic of Ghana, is a country in West Africa. It abuts the Gulf of Guinea and the Atlantic Ocean to the south, sharing borders with Ivory Coast in the west, Burkina Faso in the north, and Togo in the east"
+      );
+
+      let Country16 = new Country(
+        `<img src="./src/Botswana2.jpeg"/ width="100%">`,
+        "Botswana",
+        " Gaborone",
+        "Africa",
+        " 2.588 million (2021)",
+        `<img src="Botswana.png"/width="30">`,
+        "Botswana, a landlocked country in Southern Africa, has a landscape defined by the Kalahari Desert and the Okavango Delta, which becomes a lush animal habitat during the seasonal floods. The massive Central Kalahari Game Reserve, with its fossilized river valleys and undulating grasslands, is home to numerous animals including giraffes, cheetahs, hyenas and wild dogs."
+      );
+
+      let Country17 = new Country(
+        `<img src="./src/Burundi2.jpeg"/ width="100%">`,
+        "Burundi",
+        " Gitega",
+        "Africa",
+        "12.55 million (2021)",
+        `<img src="burundi.jpeg"/width="30">`,
+        "Burundi, officially the Republic of Burundi, is a landlocked country in the Great Rift Valley at the junction between the African Great Lakes region and East Africa"
+      );
+
+      let Country18 = new Country(
+        `<img src="./src/Rwanda2.jpeg"/ width="100%">`,
+        "Rwanda",
+        " Kigali",
+        "Africa",
+        "13.46 million (2021) ",
+        `<img src="rwanda.png"/width="30">`,
+        "Rwanda, officially the Republic of Rwanda, is a landlocked country in the Great Rift Valley of Central Africa, where the African Great Lakes region and Southeast Africa converge. Located a few degrees south of the Equator, Rwanda is bordered by Uganda, Tanzania, Burundi, and the Democratic Republic of the Congo"
+      );
+
+      let Country19 = new Country(
+        `<img src="./src/Mali2.jpeg"/ width="100%">`,
+        "Mali",
+        "Bamako",
+        "Africa",
+        " 21.9 million (2021)",
+        `<img src="Mali.jpeg"/ width="100%">`,
+        "Mali, officially the Republic of Mali, is a landlocked country in West Africa. Mali is the eighth-largest country in Africa, with an area of over 1,241,238 square kilometres. The population of Mali is 21.9 million. 67% of its population was estimated to be under the age of 25 in 2017"
+      );
+
+      let Country20 = new Country(
+        `<img src="./src/Egypt2.jpeg"/ width="100%">`,
+        "Egypt",
+        " Cairo",
+        "Africa",
+        "59.39 million (2021)",
+        `<img src="egypt.png"/width="30">`,
+        "Egypt, a country linking northeast Africa with the Middle East, dates to the time of the pharaohs. Millennia-old monuments sit along the fertile Nile River Valley, including Giza's colossal Pyramids and Great Sphinx as well as Luxor's hieroglyph-lined Karnak Temple and Valley of the Kings tombs. The capital, Cairo, is home to Ottoman landmarks like Muhammad Ali Mosque and the Egyptian Museum, a trove of antiquities"
+      );
+
+      let Country21 = new Country(
+        `<img src="./src/Morocco2.jpeg"/ width="100%">`,
+        "Morocco",
+        " Cape Town, Pretoria, Bloemfontein",
+        "Africa",
+        "109.3 million (2021)",
+        `<img src="Morocco.png"/width="30">`,
+        "South Africa is a country on the southernmost tip of the African continent, marked by several distinct ecosystems. Inland safari destination Kruger National Park is populated by big game. The Western Cape offers beaches, lush winelands around Stellenbosch and Paarl, craggy cliffs at the Cape of Good Hope, forest and lagoons along the Garden Route, and the city of Cape Town, beneath flat-topped Table Mountain."
+      );
+
+      let Country22 = new Country(
+        `<img src="./src/TogO2.jpeg"/ width="100%">`,
+        "Togo",
+        "Lomé",
+        "Africa",
+        "8.645 million (2021)",
+        `<img src="Togo.png"/width="30">`,
+        "Togo, a West African nation on the Gulf of Guinea, is known for its palm-lined beaches and hilltop villages. Koutammakou, inhabited by the Batammariba people, is a traditional settlement of fortresslike clay huts dating to the 17th century. In the capital, Lomé, are the multistory Grand Marché bazaar and the Fetish Market, offering traditional talismans and remedies relating to the vodun (voodoo) religion."
+      );
+
+      let Country23 = new Country(
+        `<img src="./src/Khartoum2.jpeg"/ width="100%">`,
+        " Khartoum",
+        " Khartoum",
+        "Africa",
+        " 45.66 million (2021)",
+        `<img src="Khartoum.png"/width="30">`,
+        "Sudan, officially the Republic of the Sudan, is a country in Northeast Africa. It borders the Central African Republic to the southwest, Chad to the west, Egypt to the north, Eritrea to the northeast, Ethiopia to the southeast, Libya to the northwest, South Sudan to the south, and the Red Sea."
+      );
+
+      let Country24 = new Country(
+        `<img src="./src/Malawi2.jpeg"/ width="100%">`,
+        "Malawi",
+        " Lilongwe",
+        "Africa",
+        " 19.89 million (2021)",
+        `<img src="Malawi.png"/width="30">`,
+        "Malawi, a landlocked country in southeastern Africa, is defined by its topography of highlands split by the Great Rift Valley and enormous Lake Malawi. The lake’s southern end falls within Lake Malawi National Park – sheltering diverse wildlife from colorful fish to baboons – and its clear waters are popular for diving and boating. Peninsular Cape Maclear is known for its beach resorts."
+      );
+
+      let Country25 = new Country(
+        `<img src="./src/Libya2.jpeg"/ width="100%">`,
+        "Libya",
+        " Tripoli",
+        "Africa",
+        " 6.735 million (2021) ",
+        `<img src="Libya.png"/width="30">`,
+        "Libya, officially the State of Libya, is a country in the Maghreb region in North Africa. It is bordered by the Mediterranean Sea to the north, Egypt to the east, Sudan to the southeast, Chad to the south, Niger to the southwest, Algeria to the west, and Tunisia to the northwest."
+      );
+
+      console.log(CountryOne);
+      const shown1 = () => {
+        CountryOne.details();
+      };
+
+      const shown2 = () => {
+        CountryTwo.details();
+      };
+
+      const shown3 = () => {
+        CountryThree.details();
+      };
+
+      const shown4 = () => {
+        Country4.details();
+      };
+
+      const shown5 = () => {
+        Country5.details();
+      };
+      const shown6 = () => {
+        Country6.details();
+      };
+      const shown7 = () => {
+        Country7.details();
+      };
+      const shown8 = () => {
+        Country8.details();
+      };
+      const shown9 = () => {
+        Country9.details();
+      };
+      const shown10 = () => {
+        Country10.details();
+      };
+      const shown11 = () => {
+        Country11.details();
+      };
+      const shown12 = () => {
+        Country12.details();
+      };
+      const shown13 = () => {
+        Country13.details();
+      };
+      const shown14 = () => {
+        Country14.details();
+      };
+      const shown15 = () => {
+        Country15.details();
+      };
+      const shown16 = () => {
+        Country16.details();
+      };
+      const shown17 = () => {
+        Country17.details();
+      };
+      const shown18 = () => {
+        Country18.details();
+      };
+      const shown19 = () => {
+        Country19.details();
+      };
+      const shown20 = () => {
+        Country20.details();
+      };
+      const shown21 = () => {
+        Country21.details();
+      };
+      const shown22 = () => {
+        Country22.details();
+      };
+      const shown23 = () => {
+        Country23.details();
+      };
+      const shown24 = () => {
+        Country24.details();
+      };
+      const shown25 = () => {
+        Country25.details();
+      };
+    </script>
+  </body>
+</html>
